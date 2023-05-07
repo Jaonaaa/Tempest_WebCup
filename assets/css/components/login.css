@@ -1,0 +1,160 @@
+body {
+  overflow: hidden;
+}
+
+.svg-bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  width: 200px;
+}
+
+.svg-top-left {
+  position: fixed;
+  top: -120px;
+  left: -120px;
+  height: 350px;
+}
+
+.svg-center-right {
+  position: fixed;
+  top: 30%;
+  right: -100px;
+  height: 400px;
+}
+
+@media screen and (max-width: 900px) {
+  .svg-center-right {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .svg-top-left {
+    height: 180px;
+    top: -70px;
+    left: -70px;
+  }
+
+  .svg-bottom-left {
+    width: 100px;
+  }
+}
+
+.form-cotnainer {
+  height: 100vh;
+  width: 100vw;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  gap: 10px;
+}
+
+.form-logo {
+  width: 12.5rem;
+}
+
+.form-title {
+  font-family: Poppins Light;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-sequence {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.item {
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  font-family: Poppins Light;
+  color: var(--color);
+  background: rgba(188, 130, 238, 0.197);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.item.active {
+  background: var(--theme);
+  color: white;
+}
+
+.form-btn {
+  border: none;
+  outline: none;
+  background: var(--theme);
+  color: white;
+  padding: 0.8rem 1.9rem;
+  margin-top: 0 !important;
+}
+
+.switch-form,
+.form-btn {
+  cursor: pointer;
+}
+
+#login-form .switch-form {
+  margin-top: -3.5vh !important;
+}
+
+#signup-form .switch-form {
+  margin-top: -1vh !important;
+  margin-right: 5px !important;
+}
+
+.switch-form {
+  margin-right: 0px;
+}
+
+.form-btn,
+.switch-form {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  margin-top: -5px;
+  font-family: Poppins Light;
+}
+
+.controls-container {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  gap: 4vh;
+  align-items: flex-start;
+}
+
+.controls-container.active {
+  display: flex;
+}
+
+.back-btn {
+  color: 333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.back-btn svg {
+  width: 10px;
+  fill: gray;
+}
